@@ -1,0 +1,33 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import pageData from '../../data/pages/gallery.json';
+---
+
+<Layout
+  title={pageData.title}
+  description={pageData.description}
+  canonical="https://vegantattoostudios.com/gallery/"
+  modifiedTime={pageData.modified}
+>
+  <article class="container-site py-10 md:py-14">
+    <header class="mx-auto mb-8 max-w-3xl text-center">
+      <h1 class="text-ink mb-3">Vegan Tattoos Gallery</h1>
+      <p class="text-ink-muted">{pageData.description}</p>
+    </header>
+
+    <figure class="mx-auto max-w-4xl">
+      <img
+        src="https://vegantattoostudios.com/wp-content/uploads/2021/07/%D0%BA%D0%BE%D0%BB%D0%BB%D0%B0%D0%B62_960x0_c37.jpg"
+        alt="Vegan tattoo gallery collage"
+        width={960}
+        height={640}
+        class="border-border w-full rounded-xl border shadow-md"
+        loading="eager"
+        decoding="async"
+      />
+      <figcaption class="text-ink-muted mt-3 text-center text-sm">
+        A collection of vegan tattoo artwork from artists around the world.
+      </figcaption>
+    </figure>
+  </article>
+</Layout>

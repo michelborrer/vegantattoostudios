@@ -1,0 +1,49 @@
+---
+const footerNav = [
+  { label: 'Home', href: '/' },
+  { label: 'Stores', href: '/location/' },
+  { label: 'Gallery', href: '/gallery/' },
+  { label: 'About Us', href: '/about-us/' },
+  { label: 'Contact Us', href: '/contact-us/' },
+  { label: 'Terms and Conditions', href: '/terms-and-conditions/' },
+];
+
+const year = new Date().getFullYear();
+---
+
+<footer class="border-border bg-brand-900 mt-auto border-t text-white">
+  <div class="container-site py-12">
+    <div class="grid gap-8 md:grid-cols-2">
+      <div>
+        <p class="text-brand-100 mb-4 text-lg font-semibold">Vegan Tattoo Studios</p>
+        <p class="text-brand-100/80 text-sm leading-relaxed">
+          A free platform to find vegan tattoo artists and studios worldwide. Discover articles,
+          aftercare tips, and cruelty-free ink inspiration.
+        </p>
+      </div>
+
+      <nav aria-label="Footer navigation">
+        <ul class="flex flex-wrap gap-x-6 gap-y-2">
+          {
+            footerNav.map((item) => (
+              <li>
+                <a
+                  href={item.href}
+                  class="text-brand-100/80 hover:text-brand-50 text-sm no-underline transition-colors"
+                >
+                  {item.label}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </nav>
+    </div>
+
+    <div class="border-brand-700/50 mt-8 border-t pt-6">
+      <p class="text-brand-100/60 text-center text-sm">
+        &copy; {year} Vegan Tattoo Studios. All rights reserved.
+      </p>
+    </div>
+  </div>
+</footer>

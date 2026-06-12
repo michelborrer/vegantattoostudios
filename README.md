@@ -1,43 +1,60 @@
-# Astro Starter Kit: Minimal
+# Vegan Tattoo Studios
 
-```sh
-npm create astro@latest -- --template minimal
+High-performance static rebuild of [vegantattoostudios.com](https://vegantattoostudios.com/) using Astro, Tailwind CSS, and Cloudflare Pages.
+
+## Stack
+
+- **Astro 6** (TypeScript strict, static output)
+- **Tailwind CSS v4**
+- **@astrojs/cloudflare** adapter
+- **@astrojs/sitemap** for XML sitemap generation
+- Content Collections for blog posts (13 articles)
+
+## Development
+
+```bash
+npm install
+npm run dev
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Production build
 
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+```bash
+npm run build
+npm run preview
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## Cloudflare Pages deployment
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+| Setting | Value |
+|---|---|
+| Build command | `npm run build` |
+| Build output directory | `dist` |
+| Node.js version | `22` |
 
-Any static assets, like images, can be placed in the `public/` directory.
+The Cloudflare adapter outputs static assets to `dist/client/`. Cloudflare Pages reads `_headers` and `_redirects` from the build output for security headers and legacy URL 301 redirects.
 
-## 🧞 Commands
+### Wrangler (optional)
 
-All commands are run from the root of the project, from a terminal:
+```bash
+npx wrangler pages deploy dist/client --project-name=vegantattoostudios
+```
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+## SEO & URL preservation
 
-## 👀 Want to learn more?
+- `trailingSlash: 'always'` matches legacy WordPress permalinks
+- All 13 blog posts retain exact root-level slugs (e.g. `/what-it-takes-to-make-a-vegan-tattoo/`)
+- Static pages: `/location/`, `/about-us/`, `/contact-us/`, `/gallery/`, `/terms-and-conditions/`
+- `public/_redirects` handles legacy WordPress routes (store locator, auth pages, GeoDirectory templates)
+- Yoast meta titles and descriptions preserved from WordPress REST API extraction
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## Content extraction
+
+Re-extract blog posts and studio data from the live WordPress site:
+
+```bash
+curl -sL "https://vegantattoostudios.com/wp-json/wp/v2/posts?per_page=100&_embed" -o %TEMP%/vts-posts.json
+curl -sL "https://vegantattoostudios.com/wp-json/geodir/v2/places?per_page=100" -o %TEMP%/vts-places.json
+curl -sL "https://vegantattoostudios.com/wp-json/wp/v2/pages?per_page=100" -o %TEMP%/vts-pages.json
+node scripts/extract-content.mjs
+```

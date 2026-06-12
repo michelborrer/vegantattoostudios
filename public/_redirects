@@ -1,0 +1,35 @@
+# Legacy WordPress URL preservation — 301 permanent redirects
+/store-locator/    /location/    301
+/store-locator      /location/    301
+/search/            /location/    301
+/search             /location/    301
+/add-listing/       /contact-us/  301
+/add-listing        /contact-us/  301
+
+# WordPress user/auth pages (no longer applicable — redirect to home)
+/login/             /             301
+/login              /             301
+/register/          /             301
+/register           /             301
+/account/           /             301
+/account            /             301
+/forgot/            /             301
+/forgot             /             301
+/reset/             /             301
+/reset              /             301
+/change/            /             301
+/change             /             301
+/profile/           /             301
+/profile            /             301
+/users/             /             301
+/users              /             301
+
+# GeoDirectory template pages (internal WP templates)
+/gd-archive/        /location/    301
+/gd-archive         /location/    301
+/gd-archive-item/   /location/    301
+/gd-archive-item    /location/    301
+/gd-details/        /location/    301
+/gd-details         /location/    301
+/user-list-item/    /             301
+/user-list-item     /             301

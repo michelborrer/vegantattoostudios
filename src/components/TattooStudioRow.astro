@@ -1,0 +1,94 @@
+---
+import { decodeHtmlEntities } from '../lib/utils';
+
+export interface Studio {
+  slug: string;
+  name: string;
+  city: string;
+  region: string;
+  country: string;
+  street: string;
+  zip: string;
+  phone: string;
+  website: string;
+  email: string;
+  lat: string | null;
+  lng: string | null;
+}
+
+interface Props {
+  studio: Studio;
+}
+
+const { studio } = Astro.props;
+const name = decodeHtmlEntities(studio.name);
+const location = [studio.city, studio.region, studio.country].filter(Boolean).join(', ');
+const address = [studio.street, studio.zip].filter(Boolean).join(', ');
+---
+
+<article class="border-border bg-surface rounded-lg border p-5 shadow-sm transition-shadow hover:shadow-md">
+  <h3 class="text-ink mb-2 text-lg font-semibold">
+    {
+      studio.website ? (
+        <a
+          href={studio.website}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-brand-700 hover:text-brand-600 no-underline"
+        >
+          {name}
+        </a>
+      ) : (
+        name
+      )
+    }
+  </h3>
+
+  {location && (
+    <p class="text-ink-muted mb-1 text-sm">
+      <span class="sr-only">Location: </span>
+      {location}
+    </p>
+  )}
+
+  {address && (
+    <p class="text-ink-muted mb-2 text-sm">
+      <span class="sr-only">Address: </span>
+      {address}
+    </p>
+  )}
+
+  <div class="flex flex-wrap gap-3 text-sm">
+    {
+      studio.phone && (
+        <a href={`tel:${studio.phone.replace(/\s/g, '')}`} class="text-brand-700 no-underline">
+          {studio.phone}
+        </a>
+      )
+    }
+    {
+      studio.website && (
+        <a
+          href={studio.website}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-brand-700 no-underline"
+        >
+          Visit website
+        </a>
+      )
+    }
+    {
+      studio.lat && studio.lng && (
+        <a
+          href={`https://www.google.com/maps/search/?api=1&query=${studio.lat},${studio.lng}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-brand-700 no-underline"
+        >
+          View on map
+        </a>
+      )
+    }
+  </div>
+</article>

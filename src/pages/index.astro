@@ -1,17 +1,67 @@
 ---
+import { getCollection } from 'astro:content';
+import Layout from '../layouts/Layout.astro';
+import ArticleCard from '../components/ArticleCard.astro';
 
+const posts = (await getCollection('blog', ({ data }) => !data.draft)).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout
+  title="Home | Vegan Tattoo Studios"
+  description="Vegan Tattoo Studio is a free platform for you to find the right master by making all vegan tattoo artists and studios available to search for in one place."
+  type="website"
+  schema={{
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'Vegan Tattoo Studios',
+    url: 'https://vegantattoostudios.com/',
+    description:
+      'A free platform to find vegan tattoo artists and studios worldwide.',
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: 'https://vegantattoostudios.com/location/?q={search_term_string}',
+      'query-input': 'required name=search_term_string',
+    },
+  }}
+>
+  <section class="bg-surface-muted border-border border-b py-12 md:py-16">
+    <div class="container-site text-center">
+      <img
+        src="https://vegantattoostudios.com/wp-content/uploads/2021/07/cropped-kk.png"
+        alt="Vegan Tattoo Studios"
+        width="120"
+        height="308"
+        class="mx-auto mb-6 h-24 w-auto object-contain md:h-32"
+        loading="eager"
+        decoding="async"
+      />
+      <h1 class="text-ink mb-4">Vegan Tattoo Studios</h1>
+      <p class="text-ink-muted mx-auto max-w-2xl text-lg">
+        Find vegan tattoo artists and studios worldwide. Explore articles on cruelty-free ink,
+        aftercare, and studio interviews.
+      </p>
+    </div>
+  </section>
+
+  <section class="container-site py-12 md:py-16" aria-labelledby="articles-heading">
+    <h2 id="articles-heading" class="text-ink mb-8 text-center text-2xl font-semibold md:text-3xl">
+      Latest Articles
+    </h2>
+    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      {
+        posts.map((post) => (
+          <ArticleCard
+            title={post.data.title}
+            description={post.data.description}
+            href={`/${post.id}/`}
+            pubDate={post.data.pubDate}
+            image={post.data.image}
+            imageAlt={post.data.imageAlt}
+          />
+        ))
+      }
+    </div>
+  </section>
+</Layout>

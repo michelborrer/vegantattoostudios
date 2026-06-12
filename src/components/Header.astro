@@ -1,0 +1,85 @@
+---
+const navItems = [
+  { label: 'Home', href: '/' },
+  { label: 'Stores', href: '/location/' },
+  { label: 'Gallery', href: '/gallery/' },
+  { label: 'About Us', href: '/about-us/' },
+  { label: 'Contact Us', href: '/contact-us/' },
+];
+
+const currentPath = Astro.url.pathname;
+---
+
+<header class="border-border bg-surface sticky top-0 z-50 border-b shadow-sm">
+  <div class="container-site flex items-center justify-between gap-4 py-4">
+    <a href="/" class="flex shrink-0 items-center gap-3 no-underline" aria-label="Vegan Tattoo Studios — Home">
+      <img
+        src="https://vegantattoostudios.com/wp-content/uploads/2021/07/cropped-kk.png"
+        alt="Vegan Tattoo Studios"
+        width="60"
+        height="154"
+        class="h-12 w-auto object-contain"
+        loading="eager"
+        decoding="async"
+      />
+      <span class="text-ink hidden text-lg font-semibold sm:inline">Vegan Tattoo Studios</span>
+    </a>
+
+    <nav aria-label="Main navigation">
+      <button
+        type="button"
+        id="mobile-menu-btn"
+        class="text-ink hover:text-brand-700 border-border rounded-md border p-2 md:hidden"
+        aria-expanded="false"
+        aria-controls="main-nav"
+      >
+        <span class="sr-only">Open menu</span>
+        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+
+      <ul
+        id="main-nav"
+        class="border-border bg-surface absolute top-full right-0 left-0 hidden flex-col gap-1 border-b p-4 shadow-md md:static md:flex md:flex-row md:items-center md:gap-1 md:border-0 md:p-0 md:shadow-none"
+      >
+        {
+          navItems.map((item) => {
+            const isActive =
+              item.href === '/'
+                ? currentPath === '/' || currentPath === '/index.html'
+                : currentPath.startsWith(item.href);
+            return (
+              <li>
+                <a
+                  href={item.href}
+                  class:list={[
+                    'block rounded-md px-4 py-2 text-sm font-medium no-underline transition-colors',
+                    isActive
+                      ? 'bg-brand-50 text-brand-700'
+                      : 'text-ink-muted hover:bg-surface-muted hover:text-ink',
+                  ]}
+                  aria-current={isActive ? 'page' : undefined}
+                >
+                  {item.label}
+                </a>
+              </li>
+            );
+          })
+        }
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const btn = document.getElementById('mobile-menu-btn');
+  const nav = document.getElementById('main-nav');
+
+  btn?.addEventListener('click', () => {
+    const expanded = btn.getAttribute('aria-expanded') === 'true';
+    btn.setAttribute('aria-expanded', String(!expanded));
+    nav?.classList.toggle('hidden');
+    nav?.classList.toggle('flex');
+  });
+</script>

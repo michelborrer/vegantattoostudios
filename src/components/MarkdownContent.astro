@@ -1,0 +1,15 @@
+---
+import { marked } from 'marked';
+import { cleanPageContent } from '../lib/utils';
+import Prose from './Prose.astro';
+
+interface Props {
+  content: string;
+  clean?: boolean;
+}
+
+const { content, clean = true } = Astro.props;
+const html = marked.parse(clean ? cleanPageContent(content) : content, { async: false }) as string;
+---
+
+<Prose set:html={html} />

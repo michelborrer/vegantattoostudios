@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://vegantattoostudios.com/sitemap-index.xml

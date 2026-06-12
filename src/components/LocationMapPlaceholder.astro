@@ -1,0 +1,62 @@
+---
+import type { Studio } from './TattooStudioRow.astro';
+
+interface Props {
+  studios: Studio[];
+}
+
+const { studios } = Astro.props;
+const withCoords = studios.filter((s) => s.lat && s.lng);
+const center = withCoords.length
+  ? {
+      lat: withCoords.reduce((sum, s) => sum + parseFloat(s.lat!), 0) / withCoords.length,
+      lng: withCoords.reduce((sum, s) => sum + parseFloat(s.lng!), 0) / withCoords.length,
+    }
+  : { lat: 40.7128, lng: -74.006 };
+---
+
+<section aria-label="Studio locations map" class="border-border bg-surface-muted mb-10 overflow-hidden rounded-xl border">
+  <div class="bg-brand-700 px-6 py-4">
+    <h2 class="!text-white text-lg font-semibold">Find Vegan Tattoo Studios Near You</h2>
+    <p class="!text-brand-100 mt-1 text-sm">
+      {studios.length} vegan-friendly studios listed worldwide
+    </p>
+  </div>
+
+  <div class="relative flex min-h-[320px] items-center justify-center bg-gradient-to-br from-brand-50 to-brand-100 p-8 md:min-h-[400px]">
+    <div class="text-center">
+      <svg
+        class="text-brand-600 mx-auto mb-4 h-16 w-16 opacity-60"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        aria-hidden="true"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="1.5"
+          d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+        />
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="1.5"
+          d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+        />
+      </svg>
+      <p class="text-ink-muted max-w-md text-sm">
+        Interactive map coming soon. Browse the studio directory below or search by city and country.
+        Map centered near {center.lat.toFixed(1)}°, {center.lng.toFixed(1)}°.
+      </p>
+      <a
+        href={`https://www.google.com/maps/search/vegan+tattoo+studio/@${center.lat},${center.lng},3z`}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="bg-brand-600 hover:bg-brand-700 mt-4 inline-flex items-center rounded-md px-4 py-2 text-sm font-medium text-white no-underline transition-colors"
+      >
+        Search on Google Maps
+      </a>
+    </div>
+  </div>
+</section>
