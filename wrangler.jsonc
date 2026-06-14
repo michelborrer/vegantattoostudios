@@ -2,11 +2,9 @@
 	"compatibility_date": "2026-06-09",
 	"compatibility_flags": ["global_fetch_strictly_public"],
 	"name": "vegantattoostudios",
-	"main": "@astrojs/cloudflare/entrypoints/server",
 	"pages_build_output_dir": "./dist/client",
 	"assets": {
-		"directory": "./dist/client",
-		"binding": "ASSETS"
+		"directory": "./dist/client"
 	},
 	"observability": {
 		"enabled": true
