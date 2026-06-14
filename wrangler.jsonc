@@ -3,6 +3,7 @@
 	"compatibility_flags": ["global_fetch_strictly_public"],
 	"name": "vegantattoostudios",
 	"main": "@astrojs/cloudflare/entrypoints/server",
+	"pages_build_output_dir": "./dist/client",
 	"assets": {
 		"directory": "./dist/client",
 		"binding": "ASSETS"
