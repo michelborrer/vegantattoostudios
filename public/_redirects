@@ -1,8 +1,8 @@
 # Legacy WordPress URL preservation — 301 permanent redirects
-/store-locator/    /location/    301
-/store-locator      /location/    301
-/search/            /location/    301
-/search             /location/    301
+/location/          /store-locator/    301
+/location           /store-locator/    301
+/search/            /store-locator/    301
+/search             /store-locator/    301
 /add-listing/       /contact-us/  301
 /add-listing        /contact-us/  301
 
@@ -25,11 +25,11 @@
 /users              /             301
 
 # GeoDirectory template pages (internal WP templates)
-/gd-archive/        /location/    301
-/gd-archive         /location/    301
-/gd-archive-item/   /location/    301
-/gd-archive-item    /location/    301
-/gd-details/        /location/    301
-/gd-details         /location/    301
+/gd-archive/        /store-locator/    301
+/gd-archive         /store-locator/    301
+/gd-archive-item/   /store-locator/    301
+/gd-archive-item    /store-locator/    301
+/gd-details/        /store-locator/    301
+/gd-details         /store-locator/    301
 /user-list-item/    /             301
 /user-list-item     /             301

@@ -21,7 +21,7 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft)).sort(
       'A free platform to find vegan tattoo artists and studios worldwide.',
     potentialAction: {
       '@type': 'SearchAction',
-      target: 'https://vegantattoostudios.com/location/?q={search_term_string}',
+      target: 'https://vegantattoostudios.com/store-locator/?q={search_term_string}',
       'query-input': 'required name=search_term_string',
     },
   }}

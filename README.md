@@ -44,7 +44,7 @@ npx wrangler pages deploy dist/client --project-name=vegantattoostudios
 
 - `trailingSlash: 'always'` matches legacy WordPress permalinks
 - All 13 blog posts retain exact root-level slugs (e.g. `/what-it-takes-to-make-a-vegan-tattoo/`)
-- Static pages: `/location/`, `/about-us/`, `/contact-us/`, `/gallery/`, `/terms-and-conditions/`
+- Static pages: `/store-locator/`, `/about-us/`, `/contact-us/`, `/gallery/`, `/terms-and-conditions/`
 - `public/_redirects` handles legacy WordPress routes (store locator, auth pages, GeoDirectory templates)
 - Yoast meta titles and descriptions preserved from WordPress REST API extraction
 
