@@ -63,3 +63,9 @@ if (action === 'patch-build') {
     },
   });
 }
+
+if (action === 'trigger') {
+  await api(`/pages/projects/${project}/deployments`, 'POST', {
+    branch: 'main',
+  });
+}
