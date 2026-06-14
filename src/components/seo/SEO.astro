@@ -13,11 +13,14 @@ export interface SEOProps {
   schema?: Record<string, unknown> | Record<string, unknown>[];
 }
 
+const siteUrl = Astro.site?.href ?? 'https://vegantattoostudios.com/';
+const defaultImage = new URL('/logo.png', siteUrl).href;
+
 const {
   title,
   description = '',
   canonical,
-  image = 'https://vegantattoostudios.com/wp-content/uploads/2021/07/cropped-kk.png',
+  image = defaultImage,
   imageAlt = 'Vegan Tattoo Studios',
   type = 'website',
   publishedTime,
@@ -27,7 +30,6 @@ const {
   schema,
 } = Astro.props as SEOProps;
 
-const siteUrl = Astro.site?.href ?? 'https://vegantattoostudios.com/';
 const canonicalUrl = canonical ?? new URL(Astro.url.pathname, siteUrl).href;
 const robots = noindex ? 'noindex, nofollow' : 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1';
 
@@ -49,7 +51,7 @@ const defaultSchema: Record<string, unknown> = {
     url: siteUrl,
     logo: {
       '@type': 'ImageObject',
-      url: 'https://vegantattoostudios.com/wp-content/uploads/2021/07/cropped-kk.png',
+      url: defaultImage,
     },
   },
 };
@@ -89,7 +91,7 @@ const schemaGraph = schema
 {description && <meta name="twitter:description" content={description} />}
 {image && <meta name="twitter:image" content={image} />}
 
-<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-<link rel="icon" href="/favicon.ico" />
+<link rel="icon" type="image/png" sizes="512x512" href="/favicon.png" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
 <script type="application/ld+json" set:html={JSON.stringify(schemaGraph.length === 1 ? schemaGraph[0] : schemaGraph)} />
