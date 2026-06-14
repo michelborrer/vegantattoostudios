@@ -1,12 +1,4 @@
 {
-	"compatibility_date": "2026-06-09",
-	"compatibility_flags": ["global_fetch_strictly_public"],
 	"name": "vegantattoostudios",
-	"pages_build_output_dir": "./dist/client",
-	"assets": {
-		"directory": "./dist/client"
-	},
-	"observability": {
-		"enabled": true
-	}
+	"pages_build_output_dir": "./dist"
 }

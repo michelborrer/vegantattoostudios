@@ -56,7 +56,7 @@ if (action === 'create') {
     },
     build_config: {
       build_command: 'npm run build',
-      destination_dir: 'dist/client',
+      destination_dir: 'dist',
       root_dir: '',
     },
   });
@@ -85,7 +85,7 @@ if (action === 'recreate') {
     },
     build_config: {
       build_command: 'npm run build',
-      destination_dir: 'dist/client',
+      destination_dir: 'dist',
       root_dir: '',
     },
   });

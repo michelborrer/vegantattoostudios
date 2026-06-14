@@ -48,14 +48,18 @@ if (action === 'patch') {
     },
     build_config: {
       build_command: 'npm run build',
-      destination_dir: 'dist/client',
+      destination_dir: 'dist',
       root_dir: '',
     },
   });
 }
 
-if (action === 'trigger') {
-  await api(`/pages/projects/${project}/deployments`, 'POST', {
-    branch: 'main',
+if (action === 'patch-build') {
+  await api(`/pages/projects/${project}`, 'PATCH', {
+    build_config: {
+      build_command: 'npm run build',
+      destination_dir: 'dist',
+      root_dir: '',
+    },
   });
 }
