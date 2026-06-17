@@ -3,7 +3,7 @@ title: "16 Surprising Tattoo Facts"
 description: "A tattoo is a form of body art that can be permanent or temporary and is created by injecting ink into the skin. Here are 16 Surprising Tattoo Facts f"
 pubDate: "2021-07-12T17:06:36"
 updatedDate: "2022-04-17T17:25:27"
-image: "https://vegantattoostudios.com/wp-content/uploads/2021/07/tattoo-statistics.jpg"
+image: "/uploads/2021/07/tattoo-statistics-1024x681.jpg"
 imageAlt: "16 Surprising Tattoo Facts"
 draft: false
 ---

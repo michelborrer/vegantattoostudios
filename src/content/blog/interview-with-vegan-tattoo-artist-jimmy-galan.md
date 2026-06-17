@@ -3,7 +3,7 @@ title: "Interview with Vegan Tattoo Artist Jimmy Galan"
 description: "We interview the talented, vegan tattoo artist from London – Jimmy Galan! Jimmy shared with us his path to tattooing."
 pubDate: "2021-07-12T16:38:55"
 updatedDate: "2022-04-16T21:39:25"
-image: "https://vegantattoostudios.com/wp-content/uploads/2021/07/20190624_UUvqMSpqUPnceCe.jpg"
+image: "/uploads/2021/07/20190624_UUvqMSpqUPnceCe.png"
 imageAlt: "Interview with Vegan Tattoo Artist Jimmy Galan"
 draft: false
 ---

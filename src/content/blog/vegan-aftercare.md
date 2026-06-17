@@ -3,7 +3,7 @@ title: "Vegan Tattoo Aftercare"
 description: "Aftercare for your tattoo is just as important as getting the tattoo itself. Know how to care for a new tattoo and learn aftercare tips & tricks."
 pubDate: "2021-07-12T14:38:36"
 updatedDate: "2022-04-18T04:43:52"
-image: "https://vegantattoostudios.com/wp-content/uploads/2021/07/vegan-tattoo-thumbnail_1024x1024.jpg"
+image: "/uploads/2021/07/vegan-tattoo-thumbnail_1024x1024.jpg"
 imageAlt: "Vegan Tattoo Aftercare"
 draft: false
 ---

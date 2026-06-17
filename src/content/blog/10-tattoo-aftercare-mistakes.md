@@ -3,7 +3,7 @@ title: "10 Tattoo Aftercare Mistakes"
 description: "Tattoo aftercare is as important as getting the tattoo itself. You need to be sure that you are taking the best possible care of your fresh tattoo."
 pubDate: "2021-07-12T15:19:28"
 updatedDate: "2022-04-17T17:26:47"
-image: "https://vegantattoostudios.com/wp-content/uploads/2021/07/29352428_1607557419298436_3758412297927570423_o.jpg"
+image: "/uploads/2021/07/29352428_1607557419298436_3758412297927570423_o-1024x773.jpg"
 imageAlt: "10 Tattoo Aftercare Mistakes"
 draft: false
 ---

@@ -3,7 +3,7 @@ title: "What It Takes To Make A Vegan Tattoo"
 description: "Ink isn't the only thing that makes a tattoo vegan. All of the products and processes need to be 100% vegan including stencil paper, creams, ointments"
 pubDate: "2021-07-12T15:24:12"
 updatedDate: "2022-04-17T14:02:23"
-image: "https://vegantattoostudios.com/wp-content/uploads/2021/07/VegNews.VeganTattoo.jpg"
+image: "/uploads/2021/07/VegNews.VeganTattoo.jpg"
 imageAlt: "What It Takes To Make A Vegan Tattoo"
 draft: false
 ---

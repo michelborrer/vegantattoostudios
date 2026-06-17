@@ -3,7 +3,7 @@ title: "Interview with Vegan Tattoo Artist Anrijs Straume (Liverpool, UK)"
 description: "We interview an amazing vegan tattoo artist and creator Anrijs Straume from the UK. He specializes in Black and Grey Realism Portraits and Lettering t"
 pubDate: "2021-07-12T16:28:06"
 updatedDate: "2022-04-17T17:26:10"
-image: "https://vegantattoostudios.com/wp-content/uploads/2021/07/maxresdefault.jpg"
+image: "/uploads/2021/07/maxresdefault.jpg"
 imageAlt: "Interview with Vegan Tattoo Artist Anrijs Straume (Liverpool, UK)"
 draft: false
 ---

@@ -3,7 +3,7 @@ title: "Where Do Tattoos Hurt the Least & Most?"
 description: "Where are the Most Painful Places to get a Tattoo?"
 pubDate: "2022-04-18T04:26:00"
 updatedDate: "2022-04-18T04:26:00"
-image: "https://vegantattoostudios.com/wp-content/uploads/2022/04/Where-Do-Tattoos-Hurt-the-Least-Most-1.jpg"
+image: "/uploads/2022/04/Where-Do-Tattoos-Hurt-the-Least-Most-1.jpg"
 imageAlt: "Where Do Tattoos Hurt the Least & Most?"
 draft: false
 ---

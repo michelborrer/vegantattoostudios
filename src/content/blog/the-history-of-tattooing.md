@@ -3,7 +3,7 @@ title: "The History of Tattooing"
 description: "Ethnographic and historical texts reveal that Tattooing has been practiced for thousands of years. Learn about the history of tattoos and the tattooin"
 pubDate: "2021-07-12T17:30:04"
 updatedDate: "2022-04-29T03:59:21"
-image: "https://vegantattoostudios.com/wp-content/uploads/2021/07/getty.jpg"
+image: "/uploads/2021/07/getty-1024x768.jpg"
 imageAlt: "The History of Tattooing"
 draft: false
 ---

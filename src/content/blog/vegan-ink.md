@@ -3,7 +3,7 @@ title: "How to get inked and stay vegan"
 description: "The most important product when getting a vegan tattoo is tattoo ink. Vegan inks contain vegetable glycerin & plant oils instead of animal-derived ing"
 pubDate: "2021-07-12T13:45:34"
 updatedDate: "2022-04-18T04:45:22"
-image: "https://vegantattoostudios.com/wp-content/uploads/2021/07/taste-of-ink-tattoo-studio3_960x0_c37.jpg"
+image: "/uploads/2021/07/taste-of-ink-tattoo-studio3_960x0_c37.jpg"
 imageAlt: "How to get inked and stay vegan"
 draft: false
 ---

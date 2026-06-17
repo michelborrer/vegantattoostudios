@@ -3,7 +3,7 @@ title: "Tattoo Fading"
 description: "Your tattoo will naturally fade over time. There are numerous reasons a tattoo may fade or become misshapen over the course of a lifetime."
 pubDate: "2021-07-12T14:32:40"
 updatedDate: "2022-04-17T14:58:47"
-image: "https://vegantattoostudios.com/wp-content/uploads/2021/07/4628d58d8946f2dbd5e7a05cd6bfeefc-scaled.jpeg"
+image: "/uploads/2021/07/4628d58d8946f2dbd5e7a05cd6bfeefc-1024x753.jpeg"
 imageAlt: "Tattoo Fading"
 draft: false
 ---

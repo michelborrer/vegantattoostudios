@@ -3,7 +3,7 @@ title: "Tattoo Styles And Techniques. Part II"
 description: "Tattoos are slowly becoming more accepted as a modern art form. A tattoo style is the general look of the tattoo, like Realism, Blackwork, Minimalist,"
 pubDate: "2021-07-12T14:09:55"
 updatedDate: "2022-04-17T15:46:25"
-image: "https://vegantattoostudios.com/wp-content/uploads/2021/07/коллаж2_960x0_c37.jpg"
+image: "/uploads/2021/07/коллаж2_960x0_c37-768x616.jpg"
 imageAlt: "Tattoo Styles And Techniques. Part II"
 draft: false
 ---
