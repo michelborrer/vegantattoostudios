@@ -10,57 +10,136 @@ export interface SEOProps {
   modifiedTime?: string;
   author?: string;
   noindex?: boolean;
+  /** Additional schema.org nodes appended to the base Organization + WebSite graph. */
   schema?: Record<string, unknown> | Record<string, unknown>[];
+  /** Visible label for the current page in the breadcrumb trail (defaults to the title minus brand suffix). */
+  breadcrumbLabel?: string;
 }
 
 const siteUrl = Astro.site?.href ?? 'https://vegantattoostudios.com/';
+const orgName = 'Vegan Tattoo Studios';
 const defaultImage = new URL('/logo.png', siteUrl).href;
+const sameAs = [
+  'https://www.facebook.com/VeganTattooStudios/',
+  'https://www.instagram.com/vegantattoostudios/',
+];
 
 const {
   title,
   description = '',
   canonical,
   image = defaultImage,
-  imageAlt = 'Vegan Tattoo Studios',
+  imageAlt = orgName,
   type = 'website',
   publishedTime,
   modifiedTime,
   author,
   noindex = false,
   schema,
+  breadcrumbLabel,
 } = Astro.props as SEOProps;
 
 const canonicalUrl = canonical ?? new URL(Astro.url.pathname, siteUrl).href;
-const robots = noindex ? 'noindex, nofollow' : 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1';
+// Social/structured-data images must be absolute URLs.
+const resolvedImage = image ? new URL(image, siteUrl).href : undefined;
+const robots = noindex
+  ? 'noindex, nofollow'
+  : 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1';
 
-const defaultSchema: Record<string, unknown> = {
-  '@context': 'https://schema.org',
-  '@type': type === 'article' ? 'Article' : 'WebPage',
-  name: title,
-  description,
-  url: canonicalUrl,
-  ...(image && { image }),
-  ...(type === 'article' && publishedTime && { datePublished: publishedTime }),
-  ...(type === 'article' && modifiedTime && { dateModified: modifiedTime }),
-  ...(type === 'article' && author && {
-    author: { '@type': 'Person', name: author },
-  }),
-  publisher: {
-    '@type': 'Organization',
-    name: 'Vegan Tattoo Studios',
-    url: siteUrl,
-    logo: {
-      '@type': 'ImageObject',
-      url: defaultImage,
+const orgId = `${siteUrl}#organization`;
+const websiteId = `${siteUrl}#website`;
+
+const organization: Record<string, unknown> = {
+  '@type': 'Organization',
+  '@id': orgId,
+  name: orgName,
+  url: siteUrl,
+  logo: {
+    '@type': 'ImageObject',
+    url: defaultImage,
+  },
+  sameAs,
+};
+
+const website: Record<string, unknown> = {
+  '@type': 'WebSite',
+  '@id': websiteId,
+  name: orgName,
+  url: siteUrl,
+  inLanguage: 'en-US',
+  publisher: { '@id': orgId },
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: {
+      '@type': 'EntryPoint',
+      urlTemplate: `${siteUrl}store-locator/?q={search_term_string}`,
     },
+    'query-input': 'required name=search_term_string',
   },
 };
 
-const schemaGraph = schema
-  ? Array.isArray(schema)
-    ? schema
-    : [schema]
-  : [defaultSchema];
+// Build a breadcrumb trail from the URL path (skipped on the homepage).
+const segments = Astro.url.pathname.split('/').filter(Boolean);
+const cleanLabel = (breadcrumbLabel ?? title).replace(/\s*\|\s*Vegan Tattoo Studios\s*$/i, '').trim();
+const titleCase = (slug: string) =>
+  slug
+    .replace(/-/g, ' ')
+    .replace(/\b\w/g, (c) => c.toUpperCase());
+
+const breadcrumb =
+  segments.length > 0
+    ? {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: siteUrl },
+          ...segments.map((segment, i) => {
+            const isLast = i === segments.length - 1;
+            return {
+              '@type': 'ListItem',
+              position: i + 2,
+              name: isLast ? cleanLabel : titleCase(segment),
+              item: new URL(`/${segments.slice(0, i + 1).join('/')}/`, siteUrl).href,
+            };
+          }),
+        ],
+      }
+    : null;
+
+const pageNode: Record<string, unknown> = {
+  '@type': type === 'article' ? 'Article' : 'WebPage',
+  '@id': `${canonicalUrl}#${type === 'article' ? 'article' : 'webpage'}`,
+  url: canonicalUrl,
+  name: title,
+  ...(type === 'article' && { headline: cleanLabel }),
+  ...(description && { description }),
+  inLanguage: 'en-US',
+  isPartOf: { '@id': websiteId },
+  mainEntityOfPage: canonicalUrl,
+  ...(resolvedImage && {
+    image: { '@type': 'ImageObject', url: resolvedImage },
+  }),
+  ...(type === 'article' && publishedTime && { datePublished: publishedTime }),
+  ...(type === 'article' && { dateModified: modifiedTime ?? publishedTime }),
+  ...(type === 'article' && {
+    author: author
+      ? { '@type': 'Person', name: author }
+      : { '@id': orgId },
+  }),
+  publisher: { '@id': orgId },
+};
+
+// Custom schema (if provided) replaces the default page node; Organization, WebSite
+// and the breadcrumb are always present so every page shares a consistent entity graph.
+const customNodes = schema ? (Array.isArray(schema) ? schema : [schema]) : null;
+
+const graph: Record<string, unknown>[] = [
+  organization,
+  website,
+  ...(breadcrumb ? [breadcrumb] : []),
+  ...(customNodes ?? [pageNode]),
+];
+
+const jsonLd = { '@context': 'https://schema.org', '@graph': graph };
 ---
 
 <meta charset="utf-8" />
@@ -70,28 +149,30 @@ const schemaGraph = schema
 {description && <meta name="description" content={description} />}
 <link rel="canonical" href={canonicalUrl} />
 <meta name="robots" content={robots} />
+<meta name="theme-color" content="#15803d" />
 
 <meta property="og:locale" content="en_US" />
 <meta property="og:type" content={type} />
 <meta property="og:title" content={title} />
 {description && <meta property="og:description" content={description} />}
 <meta property="og:url" content={canonicalUrl} />
-<meta property="og:site_name" content="Vegan Tattoo Studios" />
-{image && <meta property="og:image" content={image} />}
-{image && imageAlt && <meta property="og:image:alt" content={imageAlt} />}
+<meta property="og:site_name" content={orgName} />
+{resolvedImage && <meta property="og:image" content={resolvedImage} />}
+{resolvedImage && imageAlt && <meta property="og:image:alt" content={imageAlt} />}
 {type === 'article' && publishedTime && (
   <meta property="article:published_time" content={publishedTime} />
 )}
-{type === 'article' && modifiedTime && (
-  <meta property="article:modified_time" content={modifiedTime} />
+{type === 'article' && (modifiedTime || publishedTime) && (
+  <meta property="article:modified_time" content={modifiedTime ?? publishedTime} />
 )}
 
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content={title} />
 {description && <meta name="twitter:description" content={description} />}
-{image && <meta name="twitter:image" content={image} />}
+{resolvedImage && <meta name="twitter:image" content={resolvedImage} />}
+{resolvedImage && imageAlt && <meta name="twitter:image:alt" content={imageAlt} />}
 
 <link rel="icon" type="image/png" sizes="512x512" href="/favicon.png" />
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
-<script type="application/ld+json" set:html={JSON.stringify(schemaGraph.length === 1 ? schemaGraph[0] : schemaGraph)} />
+<script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />

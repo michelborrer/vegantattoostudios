@@ -1,6 +1,6 @@
 ---
 title: "The History of Tattooing"
-description: "Ethnographic and historical texts reveal that Tattooing has been practiced for thousands of years. Learn about the history of tattoos and the tattooin"
+description: "Tattooing has been practiced for thousands of years. Explore the history of tattoos, from ancient Egypt and Otzi the Iceman to the first electric tattoo machine."
 pubDate: "2021-07-12T17:30:04"
 updatedDate: "2022-04-29T03:59:21"
 image: "/uploads/2021/07/getty-1024x768.jpg"
@@ -50,3 +50,5 @@ In the late 1960s, the attitude towards tattooing changed. Much credit can be gi
 He had seen a string of rock stars come and go in his San Francisco shop door during his glory years in the American tattoo scene—one of them being the rock lioness Janis Joplin whom Tuttle described as the “crazy gal with her hair and bracelets on.” She paid Tuttle a visit for a bracelet tattoo and a tiny heart tattoo on the breast. She was photographed with her new tattoo showing, and Lyle and other tattoo artists were flooded by demand from women for “the Janis tattoo.” That fateful meeting with Janis Joplin skyrocketed the then-young tattooer’s career in the tattoo scene, making him a household name. That was also around the time tattooing was outlawed in New York City and the time when the women’s liberation movement first made waves in America.
 
 Today, tattooing is making a strong comeback. It is more popular and accepted than it has ever been. All classes of people seek the best tattoo artists. This rise in popularity has placed tattooists in the category of “fine artist”. The tattooist has garnered respect not seen for over 100 years. Current artists combine the tradition of tattooing with their personal style creating unique and phenomenal body art. With the addition of new inks, tattooing has certainly reached a new plateau.
+
+_Curious about modern styles? Explore our guide to [**tattoo styles and techniques**](https://vegantattoostudios.com/tattoo-styles-and-techniques/), or read [**16 surprising tattoo facts**](https://vegantattoostudios.com/surprising-tattoo-facts/)._

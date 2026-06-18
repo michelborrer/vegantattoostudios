@@ -9,22 +9,9 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft)).sort(
 ---
 
 <Layout
-  title="Home | Vegan Tattoo Studios"
-  description="Vegan Tattoo Studio is a free platform for you to find the right master by making all vegan tattoo artists and studios available to search for in one place."
+  title="Vegan Tattoo Studios | Find Vegan Tattoo Artists Worldwide"
+  description="Vegan Tattoo Studios is a free directory to find cruelty-free tattoo artists and studios worldwide, plus guides on vegan ink, aftercare, and tattoo styles."
   type="website"
-  schema={{
-    '@context': 'https://schema.org',
-    '@type': 'WebSite',
-    name: 'Vegan Tattoo Studios',
-    url: 'https://vegantattoostudios.com/',
-    description:
-      'A free platform to find vegan tattoo artists and studios worldwide.',
-    potentialAction: {
-      '@type': 'SearchAction',
-      target: 'https://vegantattoostudios.com/store-locator/?q={search_term_string}',
-      'query-input': 'required name=search_term_string',
-    },
-  }}
 >
   <section class="bg-surface-muted border-border border-b py-12 md:py-16">
     <div class="container-site text-center">
@@ -36,16 +23,54 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft)).sort(
         class="mx-auto mb-6 h-28 w-28 rounded-full object-cover md:h-32 md:w-32"
         loading="eager"
         decoding="async"
+        fetchpriority="high"
       />
       <h1 class="text-ink mb-4">Vegan Tattoo Studios</h1>
       <p class="text-ink-muted mx-auto max-w-2xl text-lg">
         Find vegan tattoo artists and studios worldwide. Explore articles on cruelty-free ink,
         aftercare, and studio interviews.
       </p>
+      <div class="mt-7 flex flex-wrap justify-center gap-3">
+        <a
+          href="/store-locator/"
+          class="bg-brand-600 hover:bg-brand-700 inline-flex items-center rounded-md px-5 py-2.5 text-sm font-semibold text-white no-underline transition-colors"
+        >
+          Browse the studio directory
+        </a>
+        <a
+          href="/gallery/"
+          class="border-border text-ink hover:bg-surface-muted inline-flex items-center rounded-md border px-5 py-2.5 text-sm font-semibold no-underline transition-colors"
+        >
+          View the gallery
+        </a>
+      </div>
     </div>
   </section>
 
-  <section class="container-site py-12 md:py-16" aria-labelledby="articles-heading">
+  <section class="container-site py-10 md:py-14" aria-labelledby="intro-heading">
+    <div class="mx-auto max-w-3xl">
+      <h2 id="intro-heading" class="text-ink mb-4 text-2xl font-semibold md:text-3xl">
+        What is a vegan tattoo?
+      </h2>
+      <p class="text-ink-muted mb-4 leading-relaxed">
+        A vegan tattoo is created without any animal-derived products. That means more than just
+        vegan ink &mdash; it also covers the stencil paper, soap, ointments, razors, and aftercare
+        used during and after your session. Many conventional tattoo supplies still contain animal
+        ingredients such as bone char, glycerin, gelatin, and shellac, so choosing a vegan-friendly
+        artist ensures your new tattoo is fully cruelty-free.
+      </p>
+      <p class="text-ink-muted leading-relaxed">
+        We built Vegan Tattoo Studios as a free platform to connect ethical tattoo artists and
+        studios with clients who care about animals. Search our worldwide
+        <a href="/store-locator/">directory of vegan tattoo studios</a>, read our
+        <a href="/what-it-takes-to-make-a-vegan-tattoo/">guide to what makes a tattoo vegan</a>, and
+        learn about <a href="/vegan-ink/">vegan tattoo inks</a> and
+        <a href="/vegan-aftercare/">cruelty-free aftercare</a> before your next appointment.
+      </p>
+    </div>
+  </section>
+
+  <section class="container-site pb-12 md:pb-16" aria-labelledby="articles-heading">
     <h2 id="articles-heading" class="text-ink mb-8 text-center text-2xl font-semibold md:text-3xl">
       Latest Articles
     </h2>

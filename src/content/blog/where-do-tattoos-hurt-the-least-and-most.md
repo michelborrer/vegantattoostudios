@@ -1,6 +1,6 @@
 ---
 title: "Where Do Tattoos Hurt the Least & Most?"
-description: "Where are the Most Painful Places to get a Tattoo?"
+description: "Where do tattoos hurt the most and least? Discover the most and least painful places to get a tattoo, based on thousands of personal experiences."
 pubDate: "2022-04-18T04:26:00"
 updatedDate: "2022-04-18T04:26:00"
 image: "/uploads/2022/04/Where-Do-Tattoos-Hurt-the-Least-Most-1.jpg"
@@ -60,3 +60,5 @@ Your shoulder, more the deltoid area, is another great place to get tattooed if 
 The commonly known “tramp stamp”, but actually a good place for nice tattoos, is the lower back. This area is very popular, especially within women, not only because of the exposed location (with belly tops), but also because skin seems to be very tough in that particular area, as well as being desensitized.
 
 It is completely down to the individual, as well as the needle and technique being used when it comes to tattoo pain, but the above are the most common. In general, the least painful areas to get a tattoo are normally places where there a lesser amounts of nerve endings and higher amounts of fat to cushion against the more sensitive muscle and bone areas – although there are exceptions.
+
+_Once your tattoo is done, take good care of it: read our [**vegan tattoo aftercare guide**](https://vegantattoostudios.com/vegan-aftercare/) and the [**10 tattoo aftercare mistakes**](https://vegantattoostudios.com/10-tattoo-aftercare-mistakes/) to avoid._

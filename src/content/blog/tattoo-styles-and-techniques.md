@@ -1,6 +1,6 @@
 ---
-title: "Tattoo Styles And Techniques. Part II"
-description: "Tattoos are slowly becoming more accepted as a modern art form. A tattoo style is the general look of the tattoo, like Realism, Blackwork, Minimalist,"
+title: "Tattoo Styles and Techniques"
+description: "A guide to popular tattoo styles and techniques, from realism, blackwork, and minimalist to watercolor, dotwork, geometric, lettering, and trash polka."
 pubDate: "2021-07-12T14:09:55"
 updatedDate: "2022-04-17T15:46:25"
 image: "/uploads/2021/07/коллаж2_960x0_c37-768x616.jpg"

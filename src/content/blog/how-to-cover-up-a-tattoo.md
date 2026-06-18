@@ -1,6 +1,6 @@
 ---
 title: "How To Cover Up A Tattoo"
-description: "For some reason, you may consider concealing your current tattoo with cover-up tattoos. This article is about how a tattoo can be covered up."
+description: "Thinking about covering up an old tattoo? Learn the key factors that affect cover-up tattoos and how to get the best possible result from a cover-up."
 pubDate: "2021-07-12T16:33:01"
 updatedDate: "2022-04-17T17:25:54"
 image: "/uploads/2021/07/maxresdefault-1-1024x576-1160x500.jpg"

@@ -1,6 +1,6 @@
 ---
 title: "16 Surprising Tattoo Facts"
-description: "A tattoo is a form of body art that can be permanent or temporary and is created by injecting ink into the skin. Here are 16 Surprising Tattoo Facts f"
+description: "From the world's longest tattoo session to the most tattooed person alive, here are 16 surprising facts about tattoos and vegan tattooing."
 pubDate: "2021-07-12T17:06:36"
 updatedDate: "2022-04-17T17:25:27"
 image: "/uploads/2021/07/tattoo-statistics-1024x681.jpg"

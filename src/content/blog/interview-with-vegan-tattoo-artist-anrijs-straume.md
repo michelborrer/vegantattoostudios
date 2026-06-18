@@ -1,6 +1,6 @@
 ---
 title: "Interview with Vegan Tattoo Artist Anrijs Straume (Liverpool, UK)"
-description: "We interview an amazing vegan tattoo artist and creator Anrijs Straume from the UK. He specializes in Black and Grey Realism Portraits and Lettering t"
+description: "An interview with vegan tattoo artist Anrijs Straume from Liverpool, UK, creator of the Dark Trash Realism style. He shares his story, inspiration, and advice."
 pubDate: "2021-07-12T16:28:06"
 updatedDate: "2022-04-17T17:26:10"
 image: "/uploads/2021/07/maxresdefault.jpg"
