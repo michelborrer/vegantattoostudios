@@ -53,6 +53,14 @@ const relatedPosts = (await getCollection('blog', ({ data }) => !data.draft))
       </time>
       <h1 class="text-ink mb-4">{title}</h1>
       {description && <p class="text-ink-muted text-lg">{description}</p>}
+      <p class="text-ink-muted mt-4 text-sm">
+        By <span class="text-ink font-medium">{author ?? 'Vegan Tattoo Studios'}</span>
+        {updatedDate && (
+          <>
+            {' · '}Updated <time datetime={updatedDate.toISOString()}>{formatDate(updatedDate)}</time>
+          </>
+        )}
+      </p>
     </header>
 
     {

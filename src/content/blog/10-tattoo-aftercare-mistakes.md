@@ -2,7 +2,7 @@
 title: "10 Tattoo Aftercare Mistakes"
 description: "Tattoo aftercare is as important as getting the tattoo itself. You need to be sure that you are taking the best possible care of your fresh tattoo."
 pubDate: "2021-07-12T15:19:28"
-updatedDate: "2022-04-17T17:26:47"
+updatedDate: "2026-06-18T00:00:00"
 image: "/uploads/2021/07/29352428_1607557419298436_3758412297927570423_o-1024x773.jpg"
 imageAlt: "10 Tattoo Aftercare Mistakes"
 draft: false
@@ -49,4 +49,4 @@ After a few days of getting inked, the skin on your tattooed area will begin to 
 
 Your skin becomes very sensitive in the days after getting your ink. For this reason, you shouldn’t wear tight clothing around your tattoo. Remember your tattoo needs to breathe, in order to heal. Wear clothing that does not interfere with the healing of your tattoo. Tight clothes can stick to ink and seep plasma. It not only stains your clothes but also smudges your tattoo. The tight clothing can be painful to remove and peeled off any freshly formed scab and serve as excellent breeding grounds for bacteria, which might invite an infection, which you certainly do not want.
 
-_So to speak, anyone who is considering a **tattoo** should know the aftercare instruction. To read our exclusive article on 16 surprising tattoo facts **– [click here](https://vegantattoostudios.com/surprising-tattoo-facts/).**_
+_Anyone considering a **tattoo** should know proper aftercare. Next, read our exclusive article on [**16 surprising tattoo facts**](/surprising-tattoo-facts/)._

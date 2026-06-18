@@ -2,7 +2,7 @@
 title: "Tattoo Styles and Techniques"
 description: "A guide to popular tattoo styles and techniques, from realism, blackwork, and minimalist to watercolor, dotwork, geometric, lettering, and trash polka."
 pubDate: "2021-07-12T14:09:55"
-updatedDate: "2022-04-17T15:46:25"
+updatedDate: "2026-06-18T00:00:00"
 image: "/uploads/2021/07/коллаж2_960x0_c37-768x616.jpg"
 imageAlt: "Tattoo Styles And Techniques. Part II"
 draft: false
@@ -98,4 +98,4 @@ It’s a beautifully simplistic style, great for those who want a tattoo but ma
 
 Line-work is something that has been popping up more often. Tattoos can be stuffed with any colors, but black and red are used more often than others. Anything can be suitable as the theme for this style: geometric figures, movie characters, cartoons, etc.
 
-_Find the best vegan tattoo artists and studios at our [**Tattoo Store Locator**](https://vegantattoostudios.com/store-locator/)._
+_Find the best vegan tattoo artists and studios in our [**vegan tattoo studio directory**](/store-locator/)._

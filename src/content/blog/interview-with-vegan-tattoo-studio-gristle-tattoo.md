@@ -2,7 +2,7 @@
 title: "Interview with Vegan Tattoo Studio Gristle Tattoo"
 description: "An interview with Gristle Tattoo, a vegan tattoo studio in New York. Owner Dina DiCenso shares the shop's story, its artists, and its animal rescue events."
 pubDate: "2021-07-12T17:08:14"
-updatedDate: "2022-04-17T17:25:12"
+updatedDate: "2026-06-18T00:00:00"
 image: "/uploads/2021/07/shop_960x0_c37.jpg"
 imageAlt: "Interview with Vegan Tattoo Studio Gristle Tattoo"
 draft: false
@@ -45,4 +45,4 @@ We try to do several tattoo fundraising events every year for small rescues that
 
 To any artist wanting to make the switch, a vegan tattoo is more than just vegan ink. It’s ink and ointment, soap, stencil paper, and razors.  And most importantly – vegan tattoo products aren’t just for vegans – every non-vegan tattooer should be using all vegan products too since the products are of higher quality than the non-vegan ones and don’t cost more.  Most carnivores I’ve met have been grossed out by the thought of putting animal bone char, lanolin or animal glycerine under their skin.  At least if they regret the tattoo in the future, they will never regret not hurting animals for it.
 
-_If you have liked the article, here’s an **[interview with vegan tattoo Artist Jimmy Galan](https://vegantattoostudios.com/interview-with-vegan-tattoo-artist-jimmy-galan/)** you may like._
+_Enjoyed this article? You may also like our **[interview with vegan tattoo artist Jimmy Galan](/interview-with-vegan-tattoo-artist-jimmy-galan/)**._

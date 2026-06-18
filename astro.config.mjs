@@ -3,6 +3,7 @@ import { defineConfig } from 'astro/config';
 
 import tailwindcss from '@tailwindcss/vite';
 import sitemap from '@astrojs/sitemap';
+import rehypeExternalLinks from 'rehype-external-links';
 
 // https://astro.build/config
 export default defineConfig({
@@ -14,6 +15,20 @@ export default defineConfig({
 
   // Fully static prerender — hosted on Cloudflare Pages as static assets
   output: 'static',
+
+  // Open outbound links in a new tab and protect against tab-nabbing / leaking link equity.
+  markdown: {
+    rehypePlugins: [
+      [
+        rehypeExternalLinks,
+        {
+          target: '_blank',
+          rel: ['nofollow', 'noopener', 'noreferrer'],
+          protocols: ['http', 'https'],
+        },
+      ],
+    ],
+  },
 
   vite: {
     plugins: [tailwindcss()],

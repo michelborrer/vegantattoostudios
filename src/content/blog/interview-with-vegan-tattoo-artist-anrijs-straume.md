@@ -2,7 +2,7 @@
 title: "Interview with Vegan Tattoo Artist Anrijs Straume (Liverpool, UK)"
 description: "An interview with vegan tattoo artist Anrijs Straume from Liverpool, UK, creator of the Dark Trash Realism style. He shares his story, inspiration, and advice."
 pubDate: "2021-07-12T16:28:06"
-updatedDate: "2022-04-17T17:26:10"
+updatedDate: "2026-06-18T00:00:00"
 image: "/uploads/2021/07/maxresdefault.jpg"
 imageAlt: "Interview with Vegan Tattoo Artist Anrijs Straume (Liverpool, UK)"
 draft: false
@@ -85,4 +85,4 @@ Just to be safe I would use – ”dr Bronner’s magic soap”.
 
 Everything else should be vegan.
 
-_Also, we have interviewed the talented vegan tattoo artist from London – Jimmy Galan. [**Read the full interview here**](https://vegantattoostudios.com/interview-with-vegan-tattoo-artist-jimmy-galan/)._
+_We also interviewed talented London-based vegan tattoo artist Jimmy Galan — read our [**interview with Jimmy Galan**](/interview-with-vegan-tattoo-artist-jimmy-galan/)._

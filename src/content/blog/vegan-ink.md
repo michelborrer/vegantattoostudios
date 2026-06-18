@@ -2,7 +2,7 @@
 title: "How to get inked and stay vegan"
 description: "Vegan tattoo inks use vegetable glycerin and plant oils instead of animal-derived ingredients. Learn what makes ink vegan, plus a list of vegan ink brands."
 pubDate: "2021-07-12T13:45:34"
-updatedDate: "2022-04-18T04:45:22"
+updatedDate: "2026-06-18T00:00:00"
 image: "/uploads/2021/07/taste-of-ink-tattoo-studio3_960x0_c37.jpg"
 imageAlt: "How to get inked and stay vegan"
 draft: false
@@ -77,4 +77,4 @@ _**Credits:**_ [_**http://urbanvegan.net/tattoo-ink/**_](http://urbanvegan.net/
 
 _**Tattoo by: Taste of Ink Tattoo Studio**_
 
-_**Check out this relevant article: [What It Takes To Make A Vegan Tattoo](https://vegantattoostudios.com/what-it-takes-to-make-a-vegan-tattoo/).**_
+_**Related reading: [What It Takes To Make A Vegan Tattoo](/what-it-takes-to-make-a-vegan-tattoo/).**_

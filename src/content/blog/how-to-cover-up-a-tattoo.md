@@ -2,7 +2,7 @@
 title: "How To Cover Up A Tattoo"
 description: "Thinking about covering up an old tattoo? Learn the key factors that affect cover-up tattoos and how to get the best possible result from a cover-up."
 pubDate: "2021-07-12T16:33:01"
-updatedDate: "2022-04-17T17:25:54"
+updatedDate: "2026-06-18T00:00:00"
 image: "/uploads/2021/07/maxresdefault-1-1024x576-1160x500.jpg"
 imageAlt: "How To Cover Up A Tattoo"
 draft: false
@@ -21,4 +21,4 @@ When considering a cover-up tattoo, the following factors will impact the proces
 *   The size of the original tattoo. Be prepared for your new cover-up tattoo to be larger than the existing tattoo. Sometimes the tattoo artist will need to expand the size in order to cover up existing outlines or to create the best possible design. Often tattoos that are designed as cover-ups are around thirty percent larger than the first tattoo. This way, the darker areas of the design can camouflage the old tattoo, and lighter colors can be used on virgin skin, deceiving the eye into believing the cover-up tattoo is the only tattoo that has ever been there.
 *   The maintenance of the cover-up tattoo. Depending on the original tattoo and the cover-up, you may need up to three touch-up sessions before your new tattoo is complete. Although your cover-up tattoo may look great when you leave the tattoo shop, the original design may peek through once the ink is settled. If this problem arises, a few touch-up sessions are all you need to get the tattoo you want.
 
-_Here’s our another How To article you may like: [**How to get inked and stay vegan**](https://vegantattoostudios.com/how-to-get-inked-and-stay-vegan/)_
+_Here’s another how-to article you may like: [**How to get inked and stay vegan**](/vegan-ink/)._
